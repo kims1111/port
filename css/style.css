@@ -1,0 +1,111 @@
+@charset "utf-8";
+* { margin:0; padding:0}
+body,html { margin:0; padding:0;}
+/* header  */
+.container_fix { width:1430px; padding:0 15px; margin:0 auto; max-width:100%; }
+header { background:#fff;box-shadow:5px 0 10px rgba(0,0,0,0.2); height:80px; position:fixed; width:100%; opacity:0.5; transition:0.3s ease; z-index:9999;}
+header:hover {opacity:1;}
+header > .container_fix { display:flex; height:100%; align-items:center; z-index:9;}
+.pc_logo { width:20%;}
+nav { width:80%;}
+.gnb { display:flex; width:60%; float:right; justify-content: flex-end; align-items:center;}
+.gnb > li { list-style:none; padding:0 20px;}
+.gnb > li:last-child { padding-right:0;}
+.gnb > li > a { font-family: 'Arimo', sans-serif; text-decoration: none; color:#333; font-size:24px; font-weight:500;}
+header h1 > a {color:#ff0000; text-decoration: none;}
+
+#index_cont01 { width:100%; height:100vh; background:linear-gradient(0deg, #34d894, #89aeff); display:flex; justify-content:center; align-items:center;}
+#index_cont01 > h2 { font-size:50px; text-align:center; color:#fff; font-family:'Noto Sans KR'; opacity:0; position:relative; top:-50px;}
+
+#About { padding:50px 0; height:100vh; display:flex; align-items:center; justify-content: center; background:url(../img/body_bg.jpg) center/cover no-repeat fixed; box-shadow:inset 0px 0px 10px rgba(0,0,0,0.7);}
+.aboutBox { background:#fff; padding:50px 30px; border-radius:10px; display:flex; box-shadow:5px 5px 10px 5px rgba(0,0,0,0.2); opacity:0;}
+.aboutBox > * { opacity:0;}
+.leftAbout > img { height:250px; border-radius:30px;}
+.leftAbout { width:15%; display:flex; justify-content:center; align-items:flex-start; flex-flow: row wrap;}
+.leftAbout h4 { font-size:22px; text-align:center; font-family:'Noto Sans KR'; color:#333; margin:15px 0;}
+.leftAbout h5 { font-size:16px; text-align:center; font-family:'Noto Sans KR'; color:#333;}
+.centerAbout { width:40%; padding:0 15px;} 
+.centerAbout h6 { font-size:22px; color:#333; font-family:'Noto Sans KR'; margin-bottom:20px;}
+.centerAbout p { font-size:16px; color:#666; font-family: 'Noto Sans KR';}
+.centerAbout > div { height:50%;}
+.rightAbout { width:45%;}
+.rightAbout > div { height:auto;}
+.rightAbout h6 {font-size:22px; color:#333; font-family:'Noto Sans KR'; margin-bottom:20px;}
+.rightAbout p { font-size:16px; color:#666; font-family: 'Noto Sans KR'; margin-bottom:20px;}
+.rightAbout p.margin_zero { margin:0;}
+
+#Skill {background:linear-gradient(0deg, #89aeff, #0c5da0); padding: 50px 0; height:100vh; display:flex; flex-direction: column; justify-content:center;}
+#Skill > h2 { text-align:center; font-family:'Arimo';font-size:50px; color:#fff; font-weight:600; margin-bottom:50px; width:100%; height:auto; }
+.skillBox { display:flex; align-items:center; margin-bottom:20px; }
+.skillBox h4 { width:20%; text-align:right; padding-right:20px; font-family: 'Arimo';}
+.skillBox > div { width:80%; height:30px; background:#fff}
+.graph { text-align:center; box-shadow:0px 5px 5px rgba(0,0,0,0.7);}
+.graph > span { color:#333; line-height:30px; font-family: 'Arimo';}
+.skillBox:last-of-type { margin-bottom:50px;}
+
+#Work { background:url(../img/work_bg.jpg) center/cover no-repeat fixed; padding:15% 0;}
+#Work h2 { text-align:center; font-family:'Arimo';font-size:50px; color:#fff; font-weight:600;  width:100%; height:auto; margin-bottom:100px;}
+.pointText { color:#fff; font-family: 'Arimo'; text-align:center; font-size:30px; font-weight:700; position:relative; top:50px; opacity:0;}
+.workContent { height:100%; display:flex; flex-flow:row wrap; justify-content:space-around; width:1430px; margin:auto; position:relative; top:100px; opacity:0; max-width:100%;}
+.workBox { width:45%; height:auto; border:10px solid goldenrod; margin:auto 30px; cursor:pointer; position:relative;}
+.workBox img { width:100%; height:100%; }
+.workBox:hover .work_cont{ display:flex;}
+.work_cont { position:absolute; top:0; left:0; display:flex;justify-content: center; align-items: center; width:100%; height:100%; background:rgba(0,0,0,0.6); display:none; transition:0.3s ease;}
+.work_cont span { color:#fff; font-family: 'Noto Sans KR'; font-size:18px;}
+
+#contact {background:linear-gradient(0deg, #f8dada,#89aeff); height:100vh; display:flex; justify-content: center; align-items: center;}
+#contact h3 { text-align:center; color:#333; font-size:50px;}
+.contactBox { background:url(../img/imsi2.jpg) center/cover no-repeat fixed; border:3px solid #666; border-radius:3px; display: none; justify-content:flex-start; align-items: center; width:50%;margin: auto; padding:50px 30px; opacity:0;}
+.contactBox ul { list-style:none;}
+.contactBox ul li { font-size:35px; color:#fff; font-family: 'Noto Sans KR'; font-weight:600}
+.contactBox ul li a { color:#f6f6f6; text-decoration: none; transition:0.3s ease;}
+.contactBox ul li a:hover { color:#000}
+.hidden-md,.hidden-lg { display:none;}
+@media(max-width:1600px){
+    .container_fix{ width:auto;}
+    
+    .aboutBox { width:80%; margin:0 auto; flex-flow:row wrap;}
+    .leftAbout { width:100%; align-items: center; margin-bottom:5%;}
+    .centerAbout { padding:0; width:50%;}
+    .rightAbout { width:50%;}
+    .text_about { width:100%;}
+    .centerAbout p { margin-bottom:20px;}
+
+    .workContent { max-width:80%;}
+    .workBox { margin:0 0.2%; border-width:4px;}
+    .pointText { font-size:24px; width:100%; margin:0 auto;}
+
+    .skillBox h4 { width:12%;}
+
+    .contactBox { width:80%;}
+    .hidden-md { display:block;}
+    
+}
+@media(max-width:991px) {
+    header { height:50px;}
+    header h1 > a { font-size:4vw;}
+    .gnb > li > a { font-size:2.5vw;}
+    #index_cont01 > h2 { font-size:5vw;}
+
+    .centerAbout { padding:0; width:100%; margin-bottom:10px;}
+    .rightAbout { width:100%;} 
+    .rightAbout h6,.centerAbout h6,.centerAbout p { margin-bottom: 10px;}
+    .rightAbout h6,.centerAbout h6 { font-size:2vw;}
+    .centerAbout p, .rightAbout p { font-size:1.5vw;}
+
+    #Skill { height:auto;}
+    #Skill > h2 { font-size:7vw;}
+    .skillBox h4 { font-size:1.5vw;}
+    .pointText { font-size:3vw;}
+    .hidden-lg { display:block;}
+    
+    #Work { padding:30vw 0;}
+    #Work h2 { font-size:7vw; margin-bottom:3%;}
+    .slick-next:before,.slick-prev:before { background-size:20px !important; width: auto !important;}
+    .slick-prev { left:-25px !important}
+    .work_cont span { font-size:1.5vw;}
+    .workContent { max-width:90%;}
+
+    #contact h3 { font-size:5vw;}
+    .contactBox ul li { font-size:4vw;}
+}
