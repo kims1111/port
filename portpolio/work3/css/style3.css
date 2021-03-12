@@ -1,0 +1,762 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+/* reset */
+* {
+	margin:0;
+	padding:0;	
+}
+li {
+	list-style:none; 
+}
+a {
+	text-decoration:none;
+}
+
+
+#wrap {
+	width:100%;
+	position:relative;
+}
+.header {
+	width:90%;
+	height:150px;
+	background:#000;
+	padding:0 5%;
+}
+.logo {
+	width:100%;
+	height:50%;
+	text-align:center;
+	line-height:75px;
+}
+.logo a {
+	display:block;
+	width:50%;
+	height:100%;
+	margin:auto;
+
+}
+.logo a img {
+	width:100%;
+	margin-top:30px;
+}
+.gnb {
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+	text-align:center;
+	width:100%;
+	height:75px;
+	line-height:75px;
+}
+.gnb > li {
+	flex-basis: 8%;
+}
+.gnb > li > a {
+	font-size:14px;
+	color:#fff;
+	font-family: 'Bangers', cursive;
+
+}
+.gnb > li:first-child > a {
+	color:#ff0;
+}
+.gnb > li:last-child > a {
+	color:#f00;
+}
+.hidden {
+	display:none;
+}
+/*contents*/
+.subheader label:not(:first-child) {
+	font-size:12px;
+}
+#subWrap {
+	width:80%;
+	margin:auto;
+}
+.subheader {
+	width:10%;
+	float:left;
+	display:none;
+}
+.subContents {
+	width:100%;
+	float:left;
+	padding-left:5%;
+	padding-top:2%;
+}
+.subContents h2 {
+	display:block;
+	width:100%;
+	border-bottom:2px solid #aaa;
+	font-size:30px;
+	font-family: 'Bangers', cursive;
+	letter-spacing:2px;
+	margin-bottom:30px;
+}
+.shoesBox {
+	width:100%;
+	height:auto;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
+}
+.s_item {
+	width:45%;
+	height:300px;
+}
+.s_item img {
+	width:100%;
+}
+.s_item button {
+	border:1px solid #bbb;
+	background:transparent;
+	width:100%;
+	height:40px;
+	margin-top:10px;
+	transition:background 0.5s ease;
+	cursor:pointer;
+}
+.s_item button:hover {
+	background:#000;
+	color:#fff;
+}
+.noteBox {
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:space-between;
+	width:100%;
+	height:60px;
+	margin-top:10px;
+}
+.brand {
+	font-size:14px;
+	font-weight:bold;
+}
+.shoesname {
+	font-size:12px;
+}
+.money {
+	font-size:13px;
+}
+/* footer */
+.footer {
+	width:100%;
+	height:auto;
+	background:#f6f6f6;
+}
+.f_menu {
+	width:100%;
+	height:30px;
+	border-bottom:1px solid #aaa;
+	display:flex;
+	flex-flow:row wrap;
+}
+.f_menu li {
+	float:left;
+	width:20%;
+	font-size:10px;
+	color:#888;
+}
+.f_menu li:last-child {
+	width:30%;
+}
+.f_menu li a {
+	font-size:10px;
+	color:#888;
+}
+.f_box {
+    width:auto;
+    padding:30px;
+}
+.f_box > a {
+	font-size:10px;
+	text-decoration:underline;
+	color:#888;
+	margin-left:10px;
+}
+.f_box > p {
+	font-size:10px;
+	padding:10px;
+	color:#888;
+}
+.f_box > p > a {
+	color:#888;
+}
+.topmove {
+	display:block;
+	width:100px;
+	height:30px;
+	background:rgba(0,0,0,0.7);
+	position:fixed;
+	bottom:0;
+	left:50%;
+	transform:translateX(-50%);
+	text-align:center;
+	line-height:30px; 
+	color:#fff;
+	font-weight:bold; 
+	display:none;
+}
+.s_modal {
+	width:100%;
+	height:100vh;
+	position:fixed;
+	top:0;
+	background:rgba(0,0,0,0.8);
+	display:none;
+}
+.s_modalBox {
+	width:60%;
+	height:400px;
+	background:#fff;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.s_modal_image{
+	width:100%;
+	height:70%;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.viewimg {
+	width:100%;
+	height:55%;
+}
+.viewimg li {
+	position:absolute;
+}
+.viewimg li:not(:first-child) {
+	display:none;
+}
+.viewimg li img {
+	width:100%;
+	height:100%;
+}
+.choiceimg {
+	width:auto;
+	max-width:100%;
+	height:30%;
+	display:flex;
+	flex-flow:row wrap;
+}
+.choiceimg li {
+	width:auto;
+	max-width:33%;
+	cursor:pointer;
+	border-top:2px solid #000;
+}
+.choiceimg li img {
+	width:100%;
+	height:100%;
+}
+.s_modal_note {
+	width:100%;
+	height:30%;
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+.modalBrand {
+	position:absolute;
+	left:20px;
+    top:20px;
+    color:#000;
+    font-size:30px;
+    font-weight:bold;
+    display:none;
+}
+.modalName {
+	position:absolute;
+	left:20px;
+	top:15%;
+	font-size:25px;
+	font-weight:bold;
+	display:none;
+}
+.modalMoney {
+	position:absolute;
+	left:20px;
+	top:70%;
+	font-weight:bold;
+	font-size:30px;
+	color:#000;
+	display:none;
+}
+.s_modal_note button {
+	width:48%;
+	height:50px;
+	position:absolute;
+	bottom:20px;
+}
+.basket {
+	left:1%;
+	background:#ff0;
+    border:none;
+    cursor:pointer;
+}
+.buy {
+	right:1%;
+	border:none;
+	cursor:pointer;
+}
+.close {
+	position:absolute;
+	right:0;
+	top:-250%;
+	width:100px;
+	height:20px;
+	background:#01f5fe;
+	text-align:center;
+	line-height:20px;
+	border-radius:5px 5px 0 0;
+	cursor:pointer; 
+}
+
+@media(min-width:680px){
+	.header {
+		height:100px;
+	}
+	.logo{
+		width:20%;
+		float:left;
+		margin-top:28px;
+	}
+	.logo a {
+		width:70%;
+	}
+	.logo a img {
+		margin:0;
+	}
+	nav {
+		width:80%;
+		float:left;
+		height:100%;
+	}
+	.gnb {
+		margin-top:40px;
+	}
+	.gnb > li > a {
+		font-size:30px;
+		transition:color 0.5s ease;
+	}
+	.gnb > li > a:hover {
+		color:#f00;
+	}
+
+    .footer {
+    	width:100%;
+    	height:auto;
+    }
+    .f_menu {
+    	width:100%;
+    	text-align:center;
+    }
+    .f_menu li {
+    	width:10.5%;
+    }
+    .f_menu li a {
+    	font-size:12px;
+    	line-height:30px; 
+    }
+    .f_menu li:last-child {
+    	width:10.5%;
+    	font-size:12px;
+    	line-height:30px;
+    }
+    .f_box {
+    	width:auto;
+    	padding:30px;
+    }
+    .f_box > a {
+    	font-size:12px;
+    }
+    .f_box > p {
+    	font-size:12px;
+    }
+    /*contents*/
+
+.subheader {
+	width:10%;
+	float:left;
+	display:block;
+	padding-top:5%;
+}
+.subContents {
+	width:85%;
+	float:left;
+	padding-left:5%;
+	padding-top:2%;
+}
+.categori li a {
+	color:#000;
+}
+.subContents h2 {
+	display:block;
+	width:100%;
+	border-bottom:2px solid #aaa;
+	font-size:30px;
+	font-family: 'Bangers', cursive;
+	letter-spacing:2px;
+	margin-bottom:30px;
+}
+.shoesBox {
+	width:100%;
+	height:auto;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
+}
+.s_item {
+	width:30%;
+	height:400px;
+}
+.s_item img {
+	width:100%;
+}
+.s_item button {
+	border:1px solid #bbb;
+	background:transparent;
+	width:100%;
+	height:40px;
+	margin-top:10px;
+	transition:background 0.5s ease;
+}
+.s_item button:hover {
+	background:#000;
+	color:#fff;
+}
+.noteBox {
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:space-between;
+	width:100%;
+	height:60px;
+	margin-top:10px;
+}
+.brand {
+	font-size:14px;
+	font-weight:bold;
+}
+.shoesname {
+	font-size:12px;
+}
+.money {
+	font-size:13px;
+}
+.s_modal {
+	width:100%;
+	height:100vh;
+	position:fixed;
+	top:0;
+	background:rgba(0,0,0,0.8);
+	display:none;
+}
+.s_modalBox {
+	width:60%;
+	height:400px;
+	background:#fff;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.s_modal_image{
+	width:50%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.viewimg {
+	width:100%;
+	height:67%;
+}
+.viewimg li {
+	position:absolute;
+}
+.viewimg li:not(:first-child) {
+	display:none;
+}
+.viewimg li img {
+	width:100%;
+	height:100%;
+}
+.choiceimg {
+	width:auto;
+	height:20%;
+	display:flex;
+	flex-wrap:nowrap;
+}
+.choiceimg li {
+	width:auto;
+	cursor:pointer;
+	border-top:2px solid #000;
+}
+.choiceimg li img {
+	width:100%;
+	height:100%;
+}
+.s_modal_note {
+	width:50%;
+	height:100%;
+	position:absolute;
+	right:0;
+}
+.modalBrand {
+	position:absolute;
+	left:20px;
+    top:20px;
+    color:#000;
+    font-size:30px;
+    font-weight:bold;
+    display:block;
+}
+.modalName {
+	position:absolute;
+	left:20px;
+	top:15%;
+	font-size:25px;
+	font-weight:bold;
+	display:block;
+}
+.modalMoney {
+	position:absolute;
+	left:20px;
+	top:70%;
+	font-weight:bold;
+	font-size:30px;
+	color:#000;
+	display:block;
+}
+.s_modal_note button {
+	width:48%;
+	height:50px;
+	position:absolute;
+	bottom:20px;
+}
+.basket {
+	left:1%;
+	background:#ff0;
+    border:none;
+    cursor:pointer;
+}
+.buy {
+	right:1%;
+	border:none;
+	cursor:pointer;
+}
+.close {
+	position:absolute;
+	right:0;
+	top:-20px;
+	width:100px;
+	height:20px;
+	background:#01f5fe;
+	text-align:center;
+	line-height:20px;
+	border-radius:5px 5px 0 0;
+	cursor:pointer; 
+}
+}
+@media(min-width:1280px){
+	.logo a{
+		width:200px;
+		height:40px;
+	}
+	.gnb li > a{
+		font-size:35px;
+	}
+	.f_menu {
+		font-size:14px;
+	}
+	.f_box {
+		margin-left:50px;
+	}
+	.f_box > a {font-size:16px;}
+	.f_box > p {
+		font-size:14px;
+	}
+	#subWrap {
+	width:80%;
+	margin:auto;
+}
+.subheader {
+	width:15%;
+	float:left;
+	display:block;
+}
+.subContents {
+	width:80%;
+	float:left;
+	padding-top:2%;
+}
+.subContents h2 {
+	display:block;
+	width:100%;
+	border-bottom:2px solid #aaa;
+	font-size:30px;
+	font-family: 'Bangers', cursive;
+	letter-spacing:2px;
+	margin-bottom:30px;
+}
+.shoesBox {
+	width:100%;
+	height:auto;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
+}
+.s_item {
+	width:30%;
+	height:450px;
+}
+.s_item img {
+	width:100%;
+}
+.s_item button {
+	border:1px solid #bbb;
+	background:transparent;
+	width:100%;
+	height:40px;
+	margin-top:10px;
+	transition:background 0.5s ease;
+}
+.s_item button:hover {
+	background:#000;
+	color:#fff;
+}
+.noteBox {
+	display:flex;
+	flex-flow:column nowrap;
+	justify-content:space-between;
+	width:100%;
+	height:60px;
+	margin-top:10px;
+}
+.brand {
+	font-size:14px;
+	font-weight:bold;
+}
+.shoesname {
+	font-size:12px;
+}
+.money {
+	font-size:13px;
+}
+.s_modal {
+	width:100%;
+	height:100vh;
+	position:fixed;
+	top:0;
+	background:rgba(0,0,0,0.8);
+	display:none;
+}
+.s_modalBox {
+	width:60%;
+	height:500px;
+	background:#fff;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.s_modal_image{
+	width:50%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.viewimg {
+	width:100%;
+	height:80%;
+	border-bottom:2px solid #000;
+}
+.viewimg li {
+	position:absolute;
+}
+.viewimg li:not(:first-child) {
+	display:none;
+}
+.viewimg li img {
+	width:100%;
+	height:100%;
+}
+.choiceimg {
+	width:100%;
+	height:20%;
+	display:flex;
+}
+.choiceimg li {
+	width:auto;
+	cursor:pointer;
+}
+.choiceimg li img {
+	width:100%;
+	height:100%;
+}
+.s_modal_note {
+	width:50%;
+	height:100%;
+	position:absolute;
+	right:0;
+}
+.modalBrand {
+	position:absolute;
+	left:20px;
+    top:20px;
+    color:#000;
+    font-size:30px;
+    font-weight:bold;
+}
+.modalName {
+	position:absolute;
+	left:20px;
+	top:15%;
+	font-size:25px;
+	font-weight:bold;
+}
+.modalMoney {
+	position:absolute;
+	left:20px;
+	top:70%;
+	font-weight:bold;
+	font-size:30px;
+	color:#000;
+}
+.s_modal_note button {
+	width:48%;
+	height:50px;
+	position:absolute;
+	bottom:20px;
+}
+.basket {
+	left:1%;
+	background:#ff0;
+    border:none;
+    cursor:pointer;
+}
+.buy {
+	right:1%;
+	border:none;
+	cursor:pointer;
+}
+.close {
+	position:absolute;
+	right:0;
+	top:-20px;
+	width:100px;
+	height:20px;
+	background:#01f5fe;
+	text-align:center;
+	line-height:20px;
+	border-radius:5px 5px 0 0;
+	cursor:pointer; 
+}
+}

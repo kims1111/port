@@ -1,0 +1,706 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+/* reset */
+* {
+	margin:0;
+	padding:0;	
+}
+li {
+	list-style:none; 
+}
+a {
+	text-decoration:none;
+}
+
+
+#wrap {
+	width:100%;
+	position:relative;
+}
+.header {
+	width:100%;
+	height:150px;
+	background:#000;
+}
+.logo {
+	width:100%;
+	height:50%;
+	text-align:center;
+	line-height:75px;
+}
+.logo a {
+	display:block;
+	width:50%;
+	height:100%;
+	margin:auto;
+
+}
+.logo a img {
+	width:100%;
+	margin-top:30px;
+}
+.gnb {
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+	text-align:center;
+	width:100%;
+	height:75px;
+	line-height:75px;
+}
+.gnb > li {
+	flex-basis: 8%;
+}
+.gnb > li > a {
+	font-size:14px;
+	color:#fff;
+	font-family: 'Bangers', cursive;
+
+}
+.gnb > li:first-child > a {
+	color:#ff0;
+}
+.gnb > li:last-child > a {
+	color:#f00;
+}
+
+.hidden {
+	display:none;
+}
+/*contents*/
+#subWrap {
+	width:100%;
+	margin:auto;
+}
+.subheader {
+	width:20%;
+	height:auto;
+	display:none;
+}
+.categori li {
+	text-indent:20px;
+	list-style:circle; 
+}
+
+/*itembox */
+.newItems {
+	width:100%;
+	margin-top:30px;
+}
+.newItems h2, .newItems1 h2 {
+	font-family: 'Bangers', cursive;
+	font-size:40px;
+	text-align:center;
+}
+.itemBox {
+	width:100%;
+	height:auto;
+	margin-top:30px;
+	overflow-x:scroll;
+}
+.itemcover {
+	width:400%;
+    display:flex;
+	justify-content:space-between;
+}
+.item {
+	width:24%;
+	height:500px;
+}
+.item img {
+	width:100%;
+}
+.item button {
+	width:100%;
+	margin-top:30px;
+	background:transparent;
+	height:40px;
+	font-weight:bold;
+	border:1px solid #666;
+	transition:0.5s ease;
+}
+.item button:hover {
+	background:#000;
+	color:#fff;
+}
+.itemnote {
+	width:auto;
+	padding-left:10px;
+	margin-top:30px;
+}
+.itemnote span {
+	font-size:12px;
+	font-weight:bold;
+}
+.itemnote p {
+	font-size:14px;
+}
+
+.c_item {
+	width:24%;
+	height:500px;
+}
+.c_item img {
+	width:100%;
+	height:300px;
+	object-fit:contain;
+}
+.c_item button {
+	width:100%;
+	margin-top:30px;
+	background:transparent;
+	height:40px;
+	font-weight:bold;
+	border:1px solid #666;
+	transition:0.5s ease;
+}
+.c_item button:hover {
+	background:#000;
+	color:#fff;
+}
+/* item modal */
+.shoesModal {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+}
+.itemModal {
+	width:100%;
+	height:100%;
+	background:rgba(255,255,255,1);
+}
+.m_itemimg {
+	width:100%;
+	height:300px;
+	margin-top:100px;
+}
+.m_itemimg ul {
+	width:100%;
+	height:300px;
+}
+.m_itemimg ul li {
+	position:absolute;
+	width:100%;
+	height:300px;
+}
+.m_itemimg ul li img {
+	width:100%;
+	height:100%;
+}
+.m_itemimgshow {
+	width:100%;
+	height:40px;
+}
+.m_itemimgshow ul {
+	display:flex;
+	width:100%;
+	height:100%;
+}
+.m_itemimgshow ul li {
+	width:auto;
+	height:40px;
+	cursor:pointer;
+}
+.m_itemimgshow ul li img {
+	width:100%;
+	height:100%;
+}
+.shoesModal > button {
+	position:absolute;
+	top:70%;
+	right:5px;
+	z-index:9;
+	border:none;
+	background:#e1e252;
+	width:50px;
+	height:25px;
+	border-radius:5px;
+	font-size:10px;
+	cursor:pointer;
+}
+
+.m_note {
+	width:100%;
+}
+.m_note h3 {
+	margin-left:10px;
+	font-weight:normal;
+}
+.m_note h4 {
+	margin-left:10px;
+	font-weight:normal;
+}
+.m_note table {
+	margin-left:10px;
+	font-size:14px;
+	margin-top:30px;
+}
+.m_note tr:first-child td:nth-child(2){
+	font-size:20px;
+	font-weight:bold;
+}
+.m_note tr {
+	height:25px;
+}
+.m_note tr:nth-child(2) {
+	color:#43D5B0;
+}
+.m_note tr:nth-child(2) td:nth-child(2){
+	font-weight:bold;
+	font-size:18px;
+}
+.m_note table td:first-child {
+	width:40%;
+}
+.m_note button {
+	width:45%;
+    margin-left:2.5%;
+    margin-top:20px;
+    height:50px;
+    border:none;
+    cursor:pointer;
+    background:#000;
+    color:#fff;
+}
+.m_note button:nth-of-type(1){
+    background:#43D5B0;
+}
+
+
+.clothesModal {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:700px;
+	left:0;
+	display:none;
+}
+.clothesModal > .itemModal {
+	width:100%;
+	height:100%;
+	background:rgba(255,255,255,1);
+}
+.clothesModal > .itemModal > .m_itemimg {
+	width:100%;
+	height:300px;
+	margin-top:100px;
+}
+.clothesModal > .itemModal > .m_itemimg ul {
+	width:100%;
+	height:300px;
+}
+.clothesModal > .itemModal > .m_itemimg ul li {
+	position:absolute;
+	width:100%;
+	height:300px;
+}
+.clothesModal > .itemModal > .m_itemimg ul li img {
+	width:100%;
+	height:100%;
+}
+.clothesModal > .itemModal > .m_itemimgshow {
+	width:100%;
+	height:100px;
+}
+.clothesModal > .itemModal > .m_itemimgshow ul {
+	display:flex;
+}
+.clothesModal > .itemModal > .m_itemimgshow ul li {
+	width:60px;
+	height:80px;
+}
+.clothesModal > .itemModal > .m_itemimgshow ul li img {
+	width:100%;
+	height:100%;
+}
+.clothesModal > button {
+	position:absolute;
+	top:77%;
+	right:5px;
+	z-index:9;
+	border:none;
+	background:#e1e252;
+	width:50px;
+	height:25px;
+	border-radius:5px;
+	font-size:10px;
+	cursor:pointer;
+}
+
+.clothesModal > .itemModal > .m_note {
+	width:100%;
+}
+.clothesModal > .itemModal >.m_note h3 {
+	margin-left:10px;
+	font-weight:normal;
+}
+.clothesModal > .itemModal >.m_note h4 {
+	margin-left:10px;
+	font-weight:normal;
+}
+.clothesModal > .itemModal > .m_note table {
+	margin-left:10px;
+	font-size:14px;
+	margin-top:30px;
+}
+.clothesModal > .itemModal > .m_note tr:first-child td:nth-child(2){
+	font-size:20px;
+	font-weight:bold;
+}
+.clothesModal > .itemModal > .m_note tr {
+	height:25px;
+}
+.clothesModal > .itemModal > .m_note tr:nth-child(2) {
+	color:#43D5B0;
+}
+.clothesModal > .itemModal > .m_note tr:nth-child(2) td:nth-child(2){
+	font-weight:bold;
+	font-size:18px;
+}
+.clothesModal > .itemModal > .m_note table td:first-child {
+	width:40%;
+}
+.clothesModal > .itemModal > .m_note button {
+	width:45%;
+    margin-left:2.5%;
+    margin-top:20px;
+    height:50px;
+    border:none;
+    cursor:pointer;
+    background:#000;
+    color:#fff;
+}
+.clothesModal > .itemModal > .m_note button:nth-of-type(1){
+    background:#43D5B0;
+}
+/* footer */
+.footer {
+	width:100%;
+	height:auto;
+	background:#f6f6f6;
+}
+.f_menu {
+	width:100%;
+	height:30px;
+	border-bottom:1px solid #aaa;
+	display:flex;
+	flex-flow:row wrap;
+}
+.f_menu li {
+	float:left;
+	width:20%;
+	font-size:10px;
+	color:#888;
+}
+.f_menu li:last-child {
+	width:30%;
+}
+.f_menu li a {
+	font-size:10px;
+	color:#888;
+}
+.f_box {
+    width:auto;
+    padding:30px;
+}
+.f_box > a {
+	font-size:10px;
+	text-decoration:underline;
+	color:#888;
+	margin-left:10px;
+}
+.f_box > p {
+	font-size:10px;
+	padding:10px;
+	color:#888;
+}
+.f_box > p > a {
+	color:#888;
+}
+.topmove {
+	display:block;
+	width:100px;
+	height:30px;
+	background:rgba(0,0,0,0.7);
+	position:fixed;
+	bottom:0;
+	left:50%;
+	transform:translateX(-50%);
+	text-align:center;
+	line-height:30px; 
+	color:#fff;
+	font-weight:bold; 
+	display:none;
+}
+
+@media(min-width:680px){
+	.header {
+		height:100px;
+	}
+	.logo{
+		width:20%;
+		float:left;
+		margin-top:28px;
+	}
+	.logo a {
+		width:70%;
+	}
+	.logo a img {
+		margin:0;
+	}
+	nav {
+		width:80%;
+		float:left;
+		height:100%;
+	}
+	.gnb {
+		margin-top:40px;
+	}
+	.gnb > li > a {
+		font-size:30px;
+		transition:color 0.5s ease;
+	}
+	.gnb > li > a:hover {
+		color:#f00;
+	}
+
+    .footer {
+    	width:100%;
+    	height:auto;
+    }
+    .f_menu {
+    	width:100%;
+    	text-align:center;
+    }
+    .f_menu li {
+    	width:10.5%;
+    }
+    .f_menu li a {
+    	font-size:12px;
+    	line-height:30px; 
+    }
+    .f_menu li:last-child {
+    	width:10.5%;
+    	font-size:12px;
+    	line-height:30px;
+    }
+    .f_box {
+    	width:auto;
+    	padding:30px;
+    }
+    .f_box > a {
+    	font-size:12px;
+    }
+    .f_box > p {
+    	font-size:12px;
+    }
+    .itemBox {
+    	overflow:visible;
+    }
+    .itemcover {
+    	width:100%;
+    }
+    .shoesModal .m_itemimg {
+    	width:50%;
+    }
+    .m_itemimg > ul{
+    	width:100%;
+    }
+    .m_itemimg > ul > li{
+    	width:50%;
+    }
+    .m_itemimgshow {
+    	width:50%;
+
+    }
+    .m_note {
+    	width:50%;
+    	position:absolute;
+    	right:0;
+    	top:0;
+    }
+    .m_note h3 {
+    	font-size:30px;
+    	font-weight:bold;
+    }
+    .m_note table tr {
+    	height:50px;
+    }
+    .itemModal {
+    	width:100%;
+    	position:relative;
+    }
+    .shoesModal button{
+    	top:100px;
+    }
+
+    .clothesModal > .itemModal > .m_itemimg {
+    	width:50%;
+    }
+    .clothesModal > .itemModal > .m_itemimg > ul{
+    	width:100%;
+    }
+    .clothesModal > .itemModal > .m_itemimg > ul > li{
+    	width:50%;
+    }
+    .clothesModal > .itemModal > .m_itemimgshow {
+    	width:50%;
+
+    }
+    .clothesModal > .itemModal > .m_note {
+    	width:50%;
+    	position:absolute;
+    	right:0;
+    	top:0;
+    }
+    .clothesModal > .itemModal > .m_note h3 {
+    	font-size:30px;
+    	font-weight:bold;
+    }
+    .clothesModal > .itemModal > .m_note table tr {
+    	height:50px;
+    }
+    .clothesModal > .itemModal {
+    	width:100%;
+    	position:relative;
+    }
+    .clothesModal button{
+    	top:100px;
+
+    }
+}
+@media(min-width:1280px){
+	.logo a{
+		width:200px;
+		height:40px;
+	}
+	.gnb li > a{
+		font-size:35px;
+	}
+	.f_menu {
+		font-size:14px;
+	}
+	.f_box {
+		margin-left:50px;
+	}
+	.f_box > a {font-size:16px;}
+	.f_box > p {
+		font-size:14px;
+	}
+	.newItems1 {
+		margin-top:50px;
+	}
+	.shoesModal {
+		background:rgba(0,0,0,0.7);
+		position:fixed;
+	}    
+	.itemcover {
+    	width:100%;
+    }
+    .shoesModal .m_itemimg {
+    	width:50%;
+    	height:70%;
+    }
+    .m_itemimg > ul{
+    	width:100%;
+    	height:100%;
+    }
+    .m_itemimg > ul > li{
+    	width:50%;
+    	height:70%;
+    }
+    .m_itemimgshow {
+    	width:50%;
+       height:30%;
+    }
+    .m_itemimgshow ul li {
+    	height:50%;
+    }
+    .m_note {
+    	width:50%;
+    	position:absolute;
+    	right:0;
+    	top:0;
+    	height:100%;
+    }
+    .m_note h3 {
+    	font-size:40px;
+    	font-weight:bold;
+    }
+    .m_note table {
+    	margin-top:20%;
+    	height:40%;
+    	margin-left:5%;
+    }
+    .m_note > button {
+    	height:100px;
+    }
+    .itemModal {
+    	width:70%;
+    	height:75%;
+    	position:relative;
+    	left:50%;
+    	transform:translateX(-50%);
+    }
+    .shoesModal > button{
+    	top:100px;
+    	right:15%;
+    }
+    .clothesModal {
+    	position:fixed;
+    	background:rgba(0,0,0,0.7);
+    	top:0;
+    	left:0;
+    }
+    .clothesModal > .itemModal > .m_itemimg {
+    	width:50%;
+    	height:80%;
+    }
+    .clothesModal > .itemModal > .m_itemimg > ul{
+    	width:100%;
+    	height:100%;
+    }
+    .clothesModal > .itemModal > .m_itemimg > ul > li{
+    	width:50%;
+    	height:80%;
+    }
+    .clothesModal > .itemModal > .m_itemimgshow {
+    	width:50%;
+    	height:20%;
+    }
+    .clothesModal > .itemModal > .m_itemimgshow ul li {
+    	width:auto;
+    	height:100%;
+    }
+    .clothesModal > .itemModal > .m_note {
+    	width:50%;
+    	position:absolute;
+    	right:0;
+    	top:0;
+    }
+    .clothesModal > .itemModal > .m_note h3 {
+    	font-size:30px;
+    	font-weight:bold;
+    }
+    .clothesModal > .itemModal > .m_note table {
+    	margin-top:30%;
+    	height:40%;
+    	margin-left:5%;
+    }
+    .clothesModal > .itemModal {
+    	width:70%;
+    	height:80%;
+    	position:relative;
+    }
+    .clothesModal > .itemModal > .m_note button {
+    	height:100px;
+    }
+    .clothesModal > button{
+        top:100px;
+    	right:15%;
+    }
+}

@@ -1,0 +1,619 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+/* reset */
+* {
+	margin:0;
+	padding:0;	
+}
+li {
+	list-style:none; 
+}
+a {
+	text-decoration:none;
+}
+
+
+#wrap {
+	width:100%;
+	position:relative;
+}
+.header {
+	width:100%;
+	height:150px;
+	background:#000;
+}
+.logo {
+	width:100%;
+	height:50%;
+	text-align:center;
+	line-height:75px;
+}
+.logo a {
+	display:block;
+	width:50%;
+	height:100%;
+	margin:auto;
+
+}
+.logo a img {
+	width:100%;
+	margin-top:30px;
+}
+.gnb {
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+	text-align:center;
+	width:100%;
+	height:75px;
+	line-height:75px;
+}
+.gnb > li {
+	flex-basis: 8%;
+}
+.gnb > li > a {
+	font-size:14px;
+	color:#fff;
+	font-family: 'Bangers', cursive;
+
+}
+.gnb > li:first-child > a {
+	color:#ff0;
+}
+.gnb > li:last-child > a {
+	color:#f00;
+}
+
+.hidden {
+	display:none;
+}
+.s_section {
+	width:100%;
+	height:250px;
+	overflow:hidden;
+}
+.slide {
+	width:1100%;
+	height:250px;
+}
+.slide > li {
+	width:9.09%;
+	height:100%;
+	float:left;
+}
+.slide > li > a > img {
+	width:100%;
+	height:100%;
+}
+
+
+
+
+.c_section {
+	width:100%;
+	background:#fff;
+	height:auto;
+	margin-top:30px;
+}
+.c_section h2 {
+	font-size:35px;
+	text-align:center;
+	color:#000;
+	font-family: 'Bangers', cursive;
+
+}
+.choice {
+	width:100%;
+	position:relative;
+}
+.choice > div > span {
+	width:33%;
+	height:100%;
+	text-align:center;
+    filter:brightness(30%);
+    transition:all 0.5s ease;
+    position:relative;
+    cursor:pointer;
+    color:#000;
+    border-bottom:2px solid #666;
+    height:50px;
+    line-height:50px;
+    font-weight:bold;
+    font-family: 'Bangers', cursive;
+
+}
+.choice > button {
+	position:absolute;
+	top:20px;
+	left:20px;
+	border:none;
+	width:150px;
+	height:30px;
+	background:#ff0;
+	font-size:12px;
+	font-weight:bold;
+	display:none;
+	z-index:99;
+	border-radius:5px;
+	cursor:pointer;
+	transition:background 0.7s ease;
+}
+.choice > button:hover {
+	background:#f00;
+}
+.choice > div > span:hover {
+	filter:none;
+	border-bottom:2px solid #feae0f;
+}
+.choice > div {
+	width:100%;
+	display:flex;
+
+}
+.choice .footwear {
+	background:url(../image/footwearimg1.png) center/contain no-repeat;
+	background-position:90% 0;
+	color:#feae0f;
+	border-bottom:2px solid #feae0f;
+	text-shadow:1px 1px 0 #afae0f;
+	filter:none;
+}
+.clothing {
+	background:url(../image/clothingimg.png) center/contain no-repeat;
+	background-position:120% 20%;
+	background-size:75%;
+}
+.accessories {
+	background:url(../image/accimg.png) center/contain no-repeat;
+	background-position:100% 60%;
+	background-size:50%;
+}
+.cover {
+	overflow-x:scroll;
+}
+.choice1 {
+	width:400%;
+	margin-top:50px;
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-around;
+	display:none;
+	position:relative;
+	margin:auto;
+}
+.cho_box {
+	width:12%;
+	height:300px;
+	background:#f2f2f2;
+	border:2px solid #888;
+    margin-top:20px;
+}
+.cho_box1 {
+	width:12%;
+	height:400px;
+	background:#f2f2f2;
+	border:2px solid #888;
+    margin-top:20px;
+}
+
+.cho_box a > img {
+	width:100%;
+	height:60%;
+}
+.cho_box > span {
+	display:block;
+	text-align:center;
+}
+.bsfmoney {
+	font-size:14px;
+}
+.bsfname {
+	margin:20px 0;
+	font-weight:bold;
+}
+.cho_box1 .bsfname {
+	margin:20px 0;
+}
+.bsfname1 {
+	font-size:12px;
+}
+.cho_box1 a > img {
+	width:100%;
+	height:70%;
+}
+.cho_box1 > span {
+	display:block;
+	text-align:center;
+}
+.ft {
+	display:flex;
+}
+.shop {
+	width:100%;
+	margin-top:30px;
+}
+.shop > div {
+	width:100%;
+	height:33.3333%;
+	position:relative;
+}
+.shop > div > span {
+	color:#fff;
+	font-size:40px;
+	display:block;
+	width:100%;
+	height:100%;
+	text-align:center;
+	line-height:200px;
+	transition:0.5s ease;
+	font-family: 'Bangers', cursive;
+	text-shadow:1px 1px 3px #282828;
+}
+.shop > div > span:hover {
+	background:#fff;
+	color:#000;
+}
+.shop > div > div {
+	width:100%;
+	position:relative;
+	z-index:5;
+	top:0;
+	display:none;
+}
+.mens {
+	background:#1f1f1f url(../image/menshopimg.png) 0/contain no-repeat;
+}
+.mens > div > span {
+	display:block;
+	width:100%;
+	height:50%;
+	text-shadow:1px 1px 3px #282828;
+}
+.mens > div > span > a {
+	display:block;
+	width:100%;
+	height:100%;
+	text-align:center;
+	line-height:5;
+	color:#000;
+	font-size:30px;
+    font-family: 'Bangers', cursive;
+
+}
+.mens > div > .shoes {
+	background:#fff url(../image/menshoesimg.png) 0/contain no-repeat;
+	background-size:40%;
+	transition:0.5s ease;
+}
+.mens > div > .cloth {
+	background:#fff url(../image/menclothimg.png) 0/contain no-repeat;
+	background-size:30%;
+	background-position:30px 0;
+	transition:0.5s ease;
+}
+.womens {	
+	background:#1f1f1f url(../image/womenshopimg.png) 0/contain no-repeat;
+}
+.womens > div > span {
+	display:block;
+	width:100%;
+	height:50%;
+	text-shadow:1px 1px 3px #282828;
+
+}
+.womens > div > span > a {
+	display:block;
+	width:100%;
+	height:100%;
+	text-align:center;
+	line-height:5;
+	color:#000;
+	font-size:30px;
+    font-family: 'Bangers', cursive;
+}
+.womens > div > .shoes {
+	background:#fff url(../image/womenshoesimg.png) 0/contain no-repeat;
+	background-size:40%;
+	transition:0.5s ease;
+}
+.womens > div > .cloth {
+	background:#fff url(../image/womenclothimg.png) 0/contain no-repeat;
+	background-size:40%;
+	background-position:0 -50px;
+	transition:0.5s ease;
+}
+.kids {
+	background:#1f1f1f url(../image/kidsimg.png) 0/contain no-repeat;
+}
+.kids > div > span {
+	display:block;
+	width:100%;
+	height:50%;
+    text-shadow:1px 1px 3px #282828;
+}
+.kids > div > span > a {
+	display:block;
+	width:100%;
+	height:100%;
+	text-align:center;
+	line-height:5;
+	color:#000;
+	font-size:30px;
+    font-family: 'Bangers', cursive;
+
+}
+.kids > div > .shoes {
+	background:#fff url(../image/kidshoesimg.png) 0/contain no-repeat;
+    background-size:60%;
+    transition:0.5s ease;
+}
+.acc {
+	background:#1f1f1f url(../image/accimg.png) 0/contain no-repeat;
+}
+
+/* footer */
+.footer {
+	width:100%;
+	height:auto;
+	background:#f6f6f6;
+}
+.f_menu {
+	width:100%;
+	height:30px;
+	border-bottom:1px solid #aaa;
+	display:flex;
+	flex-flow:row wrap;
+}
+.f_menu li {
+	float:left;
+	width:20%;
+	font-size:10px;
+	color:#888;
+}
+.f_menu li:last-child {
+	width:30%;
+}
+.f_menu li a {
+	font-size:10px;
+	color:#888;
+}
+.f_box {
+	width:auto;
+}
+.f_box > a {
+	font-size:10px;
+	text-decoration:underline;
+	color:#888;
+	margin-left:10px;
+}
+.f_box > p {
+	font-size:10px;
+	padding:10px;
+	color:#888;
+}
+.f_box > p > a {
+	color:#888;
+}
+.topmove {
+	display:block;
+	width:100px;
+	height:30px;
+	background:rgba(0,0,0,0.7);
+	position:fixed;
+	bottom:0;
+	left:50%;
+	transform:translateX(-50%);
+	text-align:center;
+	line-height:30px; 
+	color:#fff;
+	font-weight:bold; 
+	display:none;
+}
+
+@media(min-width:680px){
+	.logo{
+		width:20%;
+		float:left;
+		margin-top:28px;
+	}
+	.logo a {
+		width:70%;
+	}
+	nav {
+		width:80%;
+		float:left;
+		height:100%;
+	}
+	.gnb {
+		margin-top:75px;
+	}
+	.gnb > li > a {
+		font-size:30px;
+		transition:color 0.5s ease;
+	}
+	.gnb > li > a:hover {
+		color:#f00;
+	}
+	.s_section {
+		height:450px;
+	}
+	.slide li {
+		height:450px;
+	}
+	.c_section {
+		width:90%;
+		margin:auto;
+		margin-top:30px;
+	}
+	.c_section h2 {
+		font-size:50px;
+	}
+	.choice {
+		margin:auto;
+		margin-top:30px;
+		width:70%;
+	}
+	.choice > div > span {
+		font-size:30px;
+	}
+	.cover {
+		overflow-x:visible;
+	}
+	.choice1 {
+		width:100%;
+		flex-flow:row wrap; 
+	}
+	.cho_box {
+		width:23%;
+	}
+	.cho_box1 {
+		width:23%;
+	}
+	.shop {
+		margin-top:30px;
+		width:100%;
+		display:flex;
+		justify-content:space-between;
+		flex-flow:row wrap;
+	}
+	.kids, .acc {
+		margin-top:30px;
+	}
+	.shop > div {
+		width:49%;
+		height:300px;
+		cursor:pointer;
+	}
+	.shop > div > span {
+		font-size:60px;
+		line-height:300px;
+	}
+    .mens > div > .shoes:hover {
+	    background:#000 url(../image/menshoesimg.png) 0/contain no-repeat;
+	    background-size:40%;
+    } 
+    .mens > div > .shoes:hover a {
+    	color:#fff;
+    }
+    .mens > div > .cloth:hover {
+	    background:#000 url(../image/menclothimg.png) 0/contain no-repeat;
+	    background-size:40%;
+    } 
+    .mens > div > .cloth:hover a {
+    	color:#fff;
+    } 
+    .womens > div > .shoes:hover {
+	    background:#000 url(../image/womenshoesimg.png) 0/contain no-repeat;
+	    background-size:40%;
+    } 
+    .womens > div > .shoes:hover a {
+    	color:#fff;
+    }
+    .womens > div > .cloth {
+    	background-size:40%;
+        background-position:0 50%;
+    }
+    .womens > div > .cloth:hover {
+	    background:#000 url(../image/womenclothimg.png) 0/contain no-repeat;
+	    background-size:40%;
+	    background-position:0 50%;
+    } 
+    .womens > div > .cloth:hover a {
+    	color:#fff;
+    }
+    .shop > div > div {
+    	height:100%;
+    }
+    .shop > div > div > span > a {
+    	font-size:40px;
+    	line-height:4;
+    }
+    .kids > div > span{
+    	height:100%;
+    }
+
+    .kids > div > .shoes >a {
+    	line-height:300px;
+    }
+
+    .footer {
+    	height:auto;
+    }
+    .f_menu {
+    	width:100%;
+    	text-align:center;
+    }
+    .f_menu li {
+    	width:10.5%;
+    }
+    .f_menu li a {
+    	font-size:12px;
+    	line-height:30px; 
+    }
+    .f_menu li:last-child {
+    	width:10.5%;
+    	font-size:12px;
+    	line-height:30px;
+    }
+    .f_box {
+    	padding:30px;
+    }
+    .f_box > a {
+    	font-size:12px;
+    }
+    .f_box > p {
+    	font-size:12px;
+    }
+}
+@media(min-width:1280px){
+	.logo a{
+		width:200px;
+		height:40px;
+	}
+	.gnb li > a{
+		font-size:35px;
+	}
+	.s_section {
+		height:80vh;
+	}
+	.slide li {
+		height:80vh;
+	}
+	.c_section {
+		margin-top:50px;
+	}
+	.choice1 {
+		margin-top:50px;
+	}
+	.choice {
+		width:60%;
+	}
+	.cho_box {
+		height:400px;
+	}
+	.bsfmoney {
+		font-size:20px;
+	}
+	.cho_box .bsfname {
+		margin:35px 0;
+		font-size:24px;
+	}
+	.cho_box1 {
+		height:600px;
+	}
+	.cho_box1 .bsfname {
+		margin:40px 0;
+		font-size:24px;
+	}
+	.f_menu {
+		font-size:14px;
+	}
+	.f_box {
+		margin-left:50px;
+	}
+	.f_box > a {font-size:16px;}
+	.f_box > p {
+		font-size:14px;
+	}
+}
